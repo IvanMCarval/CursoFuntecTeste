@@ -1,0 +1,94 @@
+:root {
+  --color-texto: black;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/cinema.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(211, 211, 211);
+}
+
+#fade, #modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+#fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+#modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 500px;
+  max-width: 90%;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+}
+
+#modal-texto {
+  color: var(--color-texto);
+  font-size: 40px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+}
+
+#valor {
+  margin-right: 0.5rem;
+  color: yellow;
+  font-size: 50px;
+}
+
+#filmesCurtidos p {
+  font-size: 50px;
+}
+
+.navBar{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: dimgrey;
+  color: aqua;
+  font-size: x-large;
+}
+
+.filmesDestaques {
+  padding: 1rem 40rem 2rem 40rem;
+}
+
+#modal.hide, #fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#modal.hide {
+  top: 0;
+}

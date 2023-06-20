@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Filmes</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <section class="navBar">
+    <nav class="d-flex justify-content-center">
+      <img src="img/navbar.png" class="w-50">
+    </nav>
+  </section>
+
+  <section class="filmesDestaques">
+    <article>
+      <div id="carouselExampleCaptions" class="carousel slide border border-4 border-info">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/btf.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block bg-black bg-opacity-50">
+              <h5>De Volta Para o Futuro Parte II</h5>
+              <p>Lançado em 1989, arrecadou $332.5 milhões</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/lotr.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block bg-black bg-opacity-50">
+              <h5>O Senhor dos Aneis: A Sociedade do Anel</h5>
+              <p>Lançado em 2002, arrecadou $898.2 milhões</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/sw.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block bg-black bg-opacity-50">
+              <h5>Star Wars</h5>
+              <p>Lançado em 1977, arrecadou $775.8 milhões</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <section id="mencoesHonrosas" class="mt-2 mb-5">
+    <div class="d-flex flex-column">
+      <div class="d-flex justify-content-center text-white">
+        <h2>Menções Honrosas</h2>
+      </div>
+  
+      <div id="filmesCurtidos" class="d-flex justify-content-center">
+        <span id="valor">0</span>
+        <p>Filme(s) curtido(s)</p>
+      </div>
+    </div>
+
+
+    <div class="d-flex justify-content-around m-3">
+      <div class="card" style="width: 18rem;">
+        <img src="img/chihiro.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">A Viagem de Chihiro</h5>
+          <p class="card-text">Lançado em 2003, a obra-prima de Hayao Miyazaki, aclamado pela crítica e vencedor de 35 premios incluindo o Osca de Melho Animação em 2003</p>
+          <div class="d-flex justify-content-between">
+            <a href="https://www.youtube.com/watch?v=SgZI655GgHk" target="_blank" class="btn btn-primary">Trailer</a>
+            <button id="botaoChihiro" type="button" class="btn btn-outline-primary">Curtir</button>
+            <button id="naoGostei" type="button" class="btn btn-outline-danger">Não Gostei</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="img/opc.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">O Poderoso Chefão</h5>
+          <p class="card-text">Lançado em 1972 de  um dos deretores mais renomados do cinema Francis Ford Coppola, vencedor em 9 categorias no Osca incluindo Melhor Filme eem 1973</p>
+          <div class="d-flex justify-content-between">
+            <a href="https://www.youtube.com/watch?v=SaHZHU-44XA" target="_blank" class="btn btn-primary">Trailer</a>
+            <button id="botaoChefao" type="button" class="btn btn-outline-primary">Curtir</button>
+            <button id="naoGostei" type="button" class="btn btn-outline-danger">Não Gostei</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="img/indi.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Indiana Jones e os Caçadores da Arca Perdida</h5>
+          <p class="card-text">Lançado em 1981 uma das grandes obras de Steven Spielberg, vencedor de 4 Oscar em 1982</p>
+          <div class="d-flex justify-content-between">
+            <a href="https://www.youtube.com/watch?v=G_wcEapEkpM" target="_blank" class="btn btn-primary">Trailer</a>
+            <button id="botaoJones" type="button" class="btn btn-outline-primary">Curtir</button>
+            <button id="naoGostei" type="button" class="btn btn-outline-danger">Não Gostei</button>
+          </div>         
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-around m-3">
+      <div class="card" style="width: 18rem;">
+        <img src="img/007.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">007 GoldenEye</h5>
+          <p class="card-text">Lançado em 1995 pelo diretor Martin Campbell, considero um dos melhores da franquia 007 faturando uma bilheteria de $356.4 milhões</p>
+          <div class="d-flex justify-content-between">
+            <a href="https://www.youtube.com/watch?v=lcOqUE0u1LM" target="_blank" class="btn btn-primary">Trailer</a>
+            <button id="botaoGoldenEye" type="button" class="btn btn-outline-primary">Curtir</button>
+            <button id="naoGostei" type="button" class="btn btn-outline-danger">Não Gostei</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="img/et.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">E.T. O Extraterrestre</h5>
+          <p class="card-text">Lançado em 1982 considerado por muitos como a melhor obra de Stecen Spielberg, com uma bilheteria de $792.9 milhões e vencedor de 3 Oscar</p>
+          <div class="d-flex justify-content-between">
+            <a href="https://www.youtube.com/watch?v=qYAETtIIClk" target="_blank" class="btn btn-primary">Trailer</a>
+            <button id="botaoET" type="button" class="btn btn-outline-primary">Curtir</button>
+            <button id="naoGostei" type="button" class="btn btn-outline-danger">Não Gostei</button>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="img/1917.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">1917</h5>
+          <p class="card-text">Lançado em 2020 do diretor Sam Mendes, tendo uma bilheteria de $384.6 milhões e vencedor de 3 Oscar</p>
+          <div class="d-flex justify-content-between">
+            <a href="https://www.youtube.com/watch?v=_3gy6K7LXHg" target="_blank" class="btn btn-primary">Trailer</a>
+            <button id="botaoGuerra" type="button" class="btn btn-outline-primary">Curtir</button>
+            <button id="naoGostei" type="button" class="btn btn-outline-danger">Não Gostei</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="fade" class="hide"></div>
+  <div id="modal" class="hide">
+    <div class="modal-header">
+      <h2>Aviso</h2>
+      <button type="button" id="close-modal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <p id="modal-texto">texto</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+      </svg>
+      2023 - Desenvolvido por Ivan | Todos os direitos reservados
+    </span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="Javascript/script.js"></script>
+</body>
+</html>
